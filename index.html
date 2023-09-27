@@ -31,6 +31,14 @@
                                hide("warn");
                        }
                 }
+                function loadDoc() {
+                        const xhttp = new XMLHttpRequest();
+                        xhttp.onload = function() {
+                                document.getElementById("demo").innerHTML = this.responseText;
+                        }
+                        xhttp.open("GET", "best_cats.txt");
+                        xhttp.send();
+                }
         </script>
     </head>
     <body>
@@ -39,8 +47,12 @@
         <div>
             I have two cats. <br> 
             They are named <a href="sox.html" target="_blank">Sox</a> and <a href="bootz.html" target="_blank">Bootz</a>. <br> 
-            Please see the attached links for more information about each of them
+            Please see the above attached links for more information about each of them
         </div>
+        <br>
+        <div id="demo"></div>
+        <button type="button" onclick="loadDoc()">Click for a list of the world's greatest cats</button>
+        <br>
         <p id="disc" onclick="disclaimer(document.getElementById('disc'));">Please <b>click</b> on this text</p>
         <p>Please see these photos of them (click to change), as well as a survey below:<br></p>
         <button onclick="hide('im')">Hide this photo :(</button>
