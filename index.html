@@ -59,7 +59,10 @@
         <br>
         <img id="im" onclick="changePhoto(this);" src="both1.jpeg"/>
     </body>
-    <form>
+    <form action="catform.php" method="GET">
+        <p><?= var_dump($_GET) ?></p>
+        <p><?= var_dump($_POST) ?></p>
+
         <br><br>
         <label for="signup">Sign-Up for their newsletter:</label>
         <br>
