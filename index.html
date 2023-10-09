@@ -60,19 +60,17 @@
         <img id="im" onclick="changePhoto(this);" src="both1.jpeg"/>
     </body>
     <form action="catform.php" method="GET">
-        <p><?= var_dump($_GET) ?></p>
-        <p><?= var_dump($_POST) ?></p>
-
+        
         <br><br>
         <label for="signup">Sign-Up for their newsletter:</label>
         <br>
-        <input type="text" onblur="req(this);" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
+        <input type="text" onblur="req(this);" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" id="signup"/>
         <p id="warn" style="display:none; font-size:75%; color:red">This field is required</p>
         <br>
         
         <label for="rating">On a scale of 1-10, how amazing are they?</label>
         <br>
-        <input type="number" min="11" max="11"/>
+        <input type="number" min="11" max="11" id="rating"/>
         <br><br>
         
         Please select your favorte features of Sox and Bootz: <br>
