@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Your Selected Colour of Interest</title>
+        <title>Colour Change!</title>
         <?php
             $colour=htmlspecialchars($_GET["colourchange"]);
             $name=htmlspecialchars($_GET["name"]);

@@ -139,6 +139,8 @@
                         ?>
                 </select>
                 </br>
+                
+                <input type="text">
                 <label for="colourchange">Select a colour:</label></br>
                 <select id="colourchange" name="colourchange">
                         <?php
