@@ -18,6 +18,10 @@
         ?>
     </head>
     <body>
-        Succes!
+        You chose to change the colour to <?= $colour ?>.</br>
+        <?php
+            echo "Name {$name} is now {$colour}";
+            mysqli_close($conn);
+        ?>
     </body>
 </html>
