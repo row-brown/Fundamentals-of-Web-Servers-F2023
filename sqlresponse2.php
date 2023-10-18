@@ -21,7 +21,7 @@
         <?php
             echo "{$name} is now {$colour}<br/>";
             echo $sql;
-            mysqli_error($conn);
+            echo mysqli_error($conn);
             mysqli_close($conn);
         ?>
     </body>
