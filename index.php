@@ -61,20 +61,6 @@
             They are named <a href="sox.html" target="_blank">Sox</a> and <a href="bootz.html" target="_blank">Bootz</a>. <br> 
             Please see the above attached links for more information about each of them
         </div>
-        <p>Please select a colour of cat you are interested from the following menu</p>
-        <form action="sqlresponse.php" method="get">
-                <label for="colour">Select a colour:</label></br>
-                <select id="colour" name="colour">
-                        <?php
-                                foreach($result as $row){
-                                        echo "<option value='{$row['colour']}'>{$row['colour']}</option>\n";
-                                }
-                                mysqli_close($conn);
-                        ?>
-                </select>
-                </br>
-                <input type="submit" value="submit colour"/>
-        </form>
         <br>
         <div id="demo"></div>
         <button type="button" onclick="loadDoc()">Click for a list of the world's greatest cats</button>
@@ -120,7 +106,47 @@
         <br><br>
 
         <input type="submit">
-
     </form>
     <button onclick="alert('No, you must stay and see how amazing they are'); changebut(this);">Click here to go away from this page.</button>
+    <br><br>
+    
+    <p>Please select a colour of cat you are interested from the following menu</p>
+        <form action="sqlresponse.php" method="get">
+                <label for="colour">Select a colour:</label></br>
+                <select id="colour" name="colour">
+                        <?php
+                                foreach($result as $row){
+                                        echo "<option value='{$row['colour']}'>{$row['colour']}</option>\n";
+                                }
+                                mysqli_close($conn);
+                        ?>
+                </select>
+                </br>
+                <input type="submit" value="submit colour"/>
+        </form>
+
+     <p>Would you like to change the colour of a cat?</p>
+        <form action="sqlresponse2.php" method="get">
+                <label for="name">Select a cat:</label></br>
+                <select id="name" name="name">
+                        <?php
+                                foreach($result as $row){
+                                        echo "<option value='{$row['name']}'>{$row['name']}</option>\n";
+                                }
+                                mysqli_close($conn);
+                        ?>
+                </select>
+                </br>
+                <label for="colourchange">Select a colour:</label></br>
+                <select id="colourchange" name="colourchange">
+                        <?php
+                                foreach($result as $row){
+                                        echo "<option value='{$row['colour']}'>{$row['colour']}</option>\n";
+                                }
+                                mysqli_close($conn);
+                        ?>
+                </select>
+                </br>
+                <input type="submit" value="submit colour change"/>
+        </form>
 </html>

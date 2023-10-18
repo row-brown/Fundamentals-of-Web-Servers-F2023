@@ -3,7 +3,8 @@
     <head>
         <title>Your Selected Colour of Interest</title>
         <?php
-            $colour=htmlspecialchars($_GET["colour"]);
+            $colour=htmlspecialchars($_GET["colourchange"]);
+            $name=htmlspecialchars($_GET["name"]);
             $server = "localhost";
             $username = "rowan";
             $password = "Class!23";
@@ -12,17 +13,11 @@
             if(!$conn){
                 die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "select * from health_info where colour='{$colour}';";
+            $sql = "update from health_info set colour=$colourchange where name=$name';";
             $result = mysqli_query($conn,$sql);
         ?>
     </head>
     <body>
-        You selected the colour <?= $colour ?>.</br>
-        <?php
-            foreach($result as $row){
-                echo "Name: {$row['name']} | Fictional?: {$row['real_or_fake']} | Colour: {$row['colour']} <br/>";
-            }
-            mysqli_close($conn);
-        ?>
+        Succes!
     </body>
 </html>
