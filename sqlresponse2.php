@@ -20,7 +20,7 @@
     <body>
         <?php
             echo "{$name} is now {$colour}<br/>";
-            echo $sql
+            echo $sql;
             mysqli_error($conn);
             mysqli_close($conn);
         ?>
