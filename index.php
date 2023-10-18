@@ -140,9 +140,8 @@
                 </select>
                 </br>
                 
-                <input type="text">
-                <label for="colourchange">Select a colour:</label></br>
-                <select id="colourchange" name="colourchange">
+                <label for="colourchange">Select a colour:</label><br>
+                <input type="text" select id="colourchange" name="colourchange">
                         <?php
                                 foreach($result as $row){
                                         echo "<option value='{$row['colour']}'>{$row['colour']}</option>\n";
