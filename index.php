@@ -141,14 +141,8 @@
                 </br>
                 
                 <label for="colourchange">Select a colour:</label><br>
-                <input type="text" select id="colourchange" name="colourchange">
-                        <?php
-                                foreach($result as $row){
-                                        echo "<option value='{$row['colour']}'>{$row['colour']}</option>\n";
-                                }
-                                mysqli_close($conn);
-                        ?>
-                </select>
+                <input type="text" id="colourchange" name="colourchange">
+                
                 </br>
                 <input type="submit" value="submit colour change"/>
         </form>
