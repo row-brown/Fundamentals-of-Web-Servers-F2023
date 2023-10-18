@@ -13,7 +13,9 @@
                         die("Connection failed: {mysqli_connect_error()}");
                 }
                 $sql = "select distinct colour from health_info;";
+                $sql2= "select distinct name from health_info;";
                 $result = mysqli_query($conn,$sql);
+                $result2 = mysqli_query($conn,$sql2);
         ?>
         <script>
                 function disclaimer(id) {
@@ -130,7 +132,7 @@
                 <label for="name">Select a cat:</label></br>
                 <select id="name" name="name">
                         <?php
-                                foreach($result as $row){
+                                foreach($result2 as $row){
                                         echo "<option value='{$row['name']}'>{$row['name']}</option>\n";
                                 }
                                 mysqli_close($conn);
