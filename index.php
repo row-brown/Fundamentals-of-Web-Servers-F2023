@@ -124,7 +124,7 @@
                         ?>
                 </select>
                 </br>
-                <input type="submit" value="submit colour"/>
+                <input type="submit" value="Submit Colour"/>
         </form>
 
      <p><b>Would you like to change the colour of a cat?</b></p>
@@ -140,10 +140,10 @@
                 </select>
                 </br>
                 
-                <label for="colourchange">Select a colour:</label><br>
+                <label for="colourchange">Choose a colour:</label><br>
                 <input type="text" id="colourchange" name="colourchange">
                 
                 </br>
-                <input type="submit" value="submit colour change"/>
+                <input type="submit" value="Submit Colour Change"/>
         </form>
 </html>
