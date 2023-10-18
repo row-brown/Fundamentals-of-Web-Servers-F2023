@@ -112,7 +112,7 @@
     <button onclick="alert('No, you must stay and see how amazing they are'); changebut(this);">Click here to go away from this page.</button>
     <br><br>
     
-    <p><b>Please select a colour of cat you are interested from the following menu</b></p>
+    <p><b>Please select a colour of cat you are interested in from the following menu</b></p>
         <form action="sqlresponse.php" method="get">
                 <label for="colour">Select a colour:</label></br>
                 <select id="colour" name="colour">
