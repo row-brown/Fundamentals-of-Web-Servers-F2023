@@ -20,7 +20,7 @@
         You selected the colour <?= $colour ?>.</br>
         <?php
             foreach($result as $row){
-                echo "Name: {$row['name']} | Fictional?: {$row['real_or_fake']} | Colour: {$row['colour']}"<br>;
+                echo "Name: {$row['name']} | Fictional?: {$row['real_or_fake']} | Colour: {$row['colour']} <br/>";
             }
             mysqli_close($conn);
         ?>
