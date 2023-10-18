@@ -13,7 +13,7 @@
             if(!$conn){
                 die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "update from health_info set colour=$colour where name=$name;";
+            $sql = "update from health_info set colour='$colour' where name='$name';";
             $result = mysqli_query($conn,$sql);
         ?>
     </head>
