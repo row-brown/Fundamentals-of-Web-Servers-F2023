@@ -3,7 +3,7 @@
     <head>
         <title>Your Selected Colour of Interest</title>
         <?php
-            $name=htmlspecialchars($_GET["colour"]);
+            $colour=htmlspecialchars($_GET["colour"]);
             $server = "localhost";
             $username = "rowan";
             $password = "Class!23";
