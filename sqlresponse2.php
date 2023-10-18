@@ -20,6 +20,9 @@
     <body>
         <?php
             echo "{$name} is now {$colour}";
+            foreach($result as $row){
+                echo "Name: {$row['name']} | Colour: {$row['colour']} <br/>";
+            }    
             mysqli_close($conn);
         ?>
     </body>
