@@ -3,6 +3,18 @@
     <head>
         <title>All you need to know about my cats</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+        <?php
+                $server = "localhost";
+                $username = "rowan";
+                $password = "Class!23";
+                $database = "catinfo";
+                $conn = mysqli_connect($server,$username,$password,$database);
+                if(!$conn){
+                        die("Connection failed: {mysqli_connect_error()}");
+                }
+                $sql = "select distinct colour from health_info;";
+                $result = mysqli_query($conn,$sql);
+        ?>
         <script>
                 function disclaimer(id) {
                         id.innerHTML = "All <b>cats</b> were consulted in the making of this site";
@@ -49,6 +61,20 @@
             They are named <a href="sox.html" target="_blank">Sox</a> and <a href="bootz.html" target="_blank">Bootz</a>. <br> 
             Please see the above attached links for more information about each of them
         </div>
+        <p>Please select a colour of cat you are interested from the following menu</p>
+        <form action="sqlresponse.php" method="get">
+                <label for="colour">Select a colour:</label></br>
+                <select id="colour" name="colour">
+                        <?php
+                                foreach($result as $row){
+                                        echo "<option value='{$row['colour']}'>{$row['colour']}</option>\n";
+                                }
+                                mysqli_close($conn);
+                        ?>
+                </select>
+                </br>
+                <input type="submit" value="submit"/>
+        </form>
         <br>
         <div id="demo"></div>
         <button type="button" onclick="loadDoc()">Click for a list of the world's greatest cats</button>
