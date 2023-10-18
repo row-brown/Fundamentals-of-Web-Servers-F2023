@@ -12,7 +12,7 @@
             if(!$conn){
                 die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "select name,weight,day_of_birth,month_of_birth,year_of_birth,colour from health_info where colour='{$colour}';";
+            $sql = "select name,real_or_fake,colour from health_info where colour='{$colour}';";
             $result = mysqli_query($conn,$sql);
         ?>
     </head>
