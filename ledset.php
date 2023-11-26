@@ -9,11 +9,11 @@
     <body>
         You set the led to <?= $set ?>.</br>
         <?php
-            if(x==="ON"){
+            if($set==="ON"){
                 $output = shell_exec("gpio write 0 1");
                 echo "LED turned ON";
             }
-            elseif (x==="OFF"){
+            elseif ($set==="OFF"){
                 $output = shell_exec("gpio write 0 0");
                 echo "LED turned OFF";
             }
