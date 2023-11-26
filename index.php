@@ -158,4 +158,10 @@
                 </br>
                 <input type="submit" value="Submit LED Change"/>
         </form><br><br>
+
+        <p><b>Check Sensor Readings</b></p>
+        <form action="sensorinfo.php">
+                <br>
+                <input type="submit" value="Check Sensor Readings"/>
+        </form><br><br>
 </html>
