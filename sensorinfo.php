@@ -5,6 +5,7 @@
         <?php
             $raw = `./bme280`;
             $deserialized = json_decode($raw,true);
+            var_dump($deserialized);
             $temp = $deserialized("temperature");
             $alt = $deserialized("altitude");
             $pres = $deserialized("pressure");
