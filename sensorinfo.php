@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Your Selected Colour of Interest</title>
+        <title>Your Sensor Readings</title>
         <?php
             $raw = `./bme280`;
             $deserialized = json_decode($raw,true);
             $temp = $deserialized("temperature");
-            $pres = $deserialized("pressure");
             $alt = $deserialized("altitude");
+            $pres = $deserialized("pressure");
         ?>
     </head>
     <body>
         <?php
-            echo "The temperature is $temp";
-            echo "The altitude is $alt";
-            echo "The pressure is $pres";
+            echo "The temperature is {$temp}<br/>";
+            echo "The altitude is {$alt}<br/>";
+            echo "The pressure is {$pres}<br/>";
         ?>
     </body>
 </html>
