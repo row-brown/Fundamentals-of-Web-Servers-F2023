@@ -12,9 +12,9 @@
     </head>
     <body>
         <?php
-            echo "The temperature is $temp"
-            echo "The altitude is $alt"
-            echo "The pressure is $pres"
+            echo "The temperature is $temp";
+            echo "The altitude is $alt";
+            echo "The pressure is $pres";
         ?>
     </body>
 </html>
