@@ -6,16 +6,17 @@
             function set_led(x) {
                 if(x==="ON"){
                     $output = shell_exec("gpio write 0 1")
+                    echo "LED turned ON"
                 }
                 if(x==="OFF"){
                     $output = shell_exec("gpio write 0 0")
+                    echo "LED turned OFF"
                 }
             }
         </script>
     </head>
     <body>
-        <p>You chose to change the LED to: <?= $set=htmlspecialchars($_GET['ledset'])?></p>
-        <?= set_led($set)?>
+        <?= set_led($htmlspecialchars($_GET['ledset']))?>
     </body>
 </html>
 
