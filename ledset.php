@@ -16,6 +16,7 @@
         </script>
     </head>
     <body>
+        <?= echo htmlspecialchars($_GET['ledset'])?>
         <?= set_led($htmlspecialchars($_GET['ledset']))?>
     </body>
 </html>
