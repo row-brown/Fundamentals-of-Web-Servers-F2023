@@ -3,9 +3,6 @@
     <head>
         <title>LED Set</title>
         <p><?= var_dump($_GET) ?></p>
-        <?php
-            mysqli_close($conn);
-        ?>
         <script>
             function set_led(x) {
                 var source=x.getAttribute("ledset");
