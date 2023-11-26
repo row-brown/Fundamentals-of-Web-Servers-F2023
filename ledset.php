@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>               
+<html>
     <head>
-        <title>LED Set</title>
-        <script>
-            function set_led(x) {
-                if(x==="ON"){
-                    $output = shell_exec("gpio write 0 1");
-                    echo "LED turned ON";
-                }
-                if(x==="OFF"){
-                    $output = shell_exec("gpio write 0 0");
-                    echo "LED turned OFF";
-                }
-            }
-        </script>
+        <title>Setting the LED</title>
+        <?php
+            $set=htmlspecialchars($_GET["ledset"]);
+        ?>
     </head>
     <body>
-        <?= echo $set=htmlspecialchars($_GET['ledset']);?>
-        <?= set_led(htmlspecialchars($_GET['ledset']));?>
+        You set the led to <?= $set ?>.</br>
+        <?php
+            if(x==="ON"){
+                $output = shell_exec("gpio write 0 1");
+                echo "LED turned ON";
+            }
+            elseif (x==="OFF"){
+                $output = shell_exec("gpio write 0 0");
+                echo "LED turned OFF";
+            }
+            else{
+                echo "Please select am ON/OFF value"
+            }
+            }
+        ?>
     </body>
 </html>
-
-
 
                         
