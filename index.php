@@ -125,7 +125,7 @@
                 </select>
                 </br>
                 <input type="submit" value="Submit Colour"/>
-        </form>
+        </form><br><br>  
 
      <p><b>Would you like to change the colour of a cat?</b></p>
         <form action="sqlresponse2.php" method="get">
@@ -145,7 +145,7 @@
                 
                 </br>
                 <input type="submit" value="Submit Colour Change"/>
-        </form>
+        </form><br><br>
 
         <p><b>Set an LED</b></p>
         <form action="ledset.php" method="get">
@@ -157,5 +157,5 @@
                 </select>
                 </br>
                 <input type="submit" value="Submit LED Change"/>
-        </form>
+        </form><br><br>
 </html>

@@ -20,7 +20,6 @@
             else{
                 echo "Please select am ON/OFF value"
             }
-            }
         ?>
     </body>
 </html>
