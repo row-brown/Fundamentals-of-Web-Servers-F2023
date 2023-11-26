@@ -146,4 +146,16 @@
                 </br>
                 <input type="submit" value="Submit Colour Change"/>
         </form>
+
+        <p><b>Set an LED</b></p>
+        <form action="ledset.php" method="get">
+                <label for="ledset">Set an LED:</label></br>
+                <select id="ledset" name="ledset">
+                        <option></option>
+                        <option>OFF</option>
+                        <option>ON</option>
+                </select>
+                </br>
+                <input type="submit" value="Submit LED Change"/>
+        </form>
 </html>
