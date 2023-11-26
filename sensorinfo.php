@@ -9,13 +9,9 @@
             $temp = $deserialized("temperature");
             $alt = $deserialized("altitude");
             $pres = $deserialized("pressure");
-        ?>
-    </head>
-    <body>
-        <?php
             echo "The temperature is {$temp}<br/>";
             echo "The altitude is {$alt}<br/>";
             echo "The pressure is {$pres}<br/>";
         ?>
-    </body>
+    </head>
 </html>
