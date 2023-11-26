@@ -160,7 +160,7 @@
         </form><br><br>
 
         <p><b>Check Sensor Readings</b></p>
-        <form action="sensorinfo.php">
+        <form action="sensorinfo.php" method="get">
                 <br>
                 <input type="submit" value="Check Sensor Readings"/>
         </form><br><br>
