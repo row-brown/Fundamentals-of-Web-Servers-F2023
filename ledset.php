@@ -2,14 +2,12 @@
 <html>               
     <head>
         <title>LED Set</title>
-        <p><?= var_dump($_GET) ?></p>
         <script>
             function set_led(x) {
-                var source=x.getAttribute("ledset");
-                if(source==="ON"){
+                if(x==="ON"){
                     $output = shell_exec("gpio write 0 1")
                 }
-                if(source==="OFF"){
+                if(x==="OFF"){
                     $output = shell_exec("gpio write 0 0")
                 }
             }
