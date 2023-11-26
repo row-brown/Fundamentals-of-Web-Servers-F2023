@@ -18,7 +18,7 @@
                 echo "LED turned OFF";
             }
             else{
-                echo "Please select am ON/OFF value"
+                echo "Please select am ON/OFF value";
             }
         ?>
     </body>
